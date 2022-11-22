@@ -30,13 +30,13 @@ const contactsSlice = createSlice({
       state.error = null;
       state.items = action.payload;
     },
-   
+
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
     },
-    
+
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
@@ -45,7 +45,7 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    
+
     [logOut.fulfilled](state) {
       state.items = [];
       state.error = null;

@@ -11,7 +11,6 @@ export const Layout = () => {
         <Outlet />
       </Suspense>
       <Toaster position="top-right" reverseOrder={false} />
-      
     </div>
   );
 };

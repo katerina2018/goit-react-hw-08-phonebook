@@ -8,7 +8,6 @@ import { ContactItems, ContactItem } from './ContactList.styles';
 export function ContactList() {
   const filter = useSelector(getFilterValue);
   const contacts = useSelector(getContacts);
-  
 
   function filterContacts() {
     if (contacts.length !== 0) {

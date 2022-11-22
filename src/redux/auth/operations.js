@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
@@ -25,7 +25,7 @@ export const register = createAsyncThunk(
     try {
       const res = await axios.post('/users/signup', credentials);
       // After successful registration, add the token to the HTTP header
-      setAuthHeader(res.data.token);   
+      setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -44,10 +44,10 @@ export const logIn = createAsyncThunk(
       const res = await axios.post('/users/login', credentials);
       // After successful login, add the token to the HTTP header
       setAuthHeader(res.data.token);
-     
+
       return res.data;
     } catch (error) {
-      toast.error("Missing user. Please, check fields or  register");
+      toast.error('Missing user. Please, check fields or  register');
       return thunkAPI.rejectWithValue(error.message);
     }
   }

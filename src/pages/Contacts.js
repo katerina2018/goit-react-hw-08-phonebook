@@ -4,7 +4,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import Form from 'components/Form';
 import Filter from 'components/Filter';
 import { fetchContacts } from 'redux/contacts/operations';
-import { getError,getIsLoading } from 'redux/contacts/selectors';
+import { getError, getIsLoading } from 'redux/contacts/selectors';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -17,11 +17,10 @@ export default function Contacts() {
 
   return (
     <>
-     <Form />
+      <Form />
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactList />
-    
     </>
   );
 }

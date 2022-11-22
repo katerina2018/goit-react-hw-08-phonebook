@@ -1,8 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-
-
 // GET @ /contacts
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -21,7 +19,7 @@ export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (contact, thunkAPI) => {
     try {
-      const response = await axios.post('/contacts',  contact );
+      const response = await axios.post('/contacts', contact);
 
       return response.data;
     } catch (e) {
