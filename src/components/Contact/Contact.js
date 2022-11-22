@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import { HiOutlineUser, HiMinusCircle } from 'react-icons/hi';
 import { ContactInfo, ContactListButton } from './Contact.styles';
 
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -17,8 +17,8 @@ const Contact = ({ contact }) => {
     <>
       {<HiOutlineUser />}
       <ContactInfo>
-        {contact.text.name}
-        <br /> {contact.text.number}
+        {contact.name}
+        <br /> {contact.number}
       </ContactInfo>
 
       <ContactListButton type="button" onClick={onDeleteContant}>
