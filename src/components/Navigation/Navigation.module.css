@@ -4,11 +4,15 @@
      padding: 12px;
      font-weight: 700;
      color: #2a363b;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
+
+  .link:hover{
+    transform: scale(1.1);}
   
-     /* .link.active {
+ .link.active {
      color: #eee9ea;
      background-color: #04aa6d;
-   }  */
+   } 
 
 
